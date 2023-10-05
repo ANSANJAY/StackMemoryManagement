@@ -1,17 +1,17 @@
-# Formalizing Procedure Call Algorithm 
-
-### 📘 Concepts
+# Formalizing Procedure Call Algorithm 📘 
 
 1. **Procedure Call Algorithm**:
-   - The procedure for calling a function involves setting up a stack frame in stack memory.
-   - Arguments of the calling function are pushed onto the stack in reverse order by the caller.
-   - The address of the next instruction (return address) is pushed onto the stack frame by the caller.
-   - The calling function takes over, pushes the previous frame’s base pointer value, and copies ESP (Stack Pointer) value to EBP (Base Pointer).
-   - The caller sets the program counter (IP register) and updates it to store the address of the next instruction in the callee function.
-   - The callee is responsible for pushing its local variables into the stack memory.
-   - Once the callee’s stack frame is set up, it can execute its logic.
-   - The stack pointer (ESP) is decremented with each push operation and incremented with each pop operation.
-   - The stack grows downward, meaning lower memory addresses are used as the stack expands.
+
+   - The procedure for calling a function involves `setting up a stack frame` in stack memory.
+
+     - Arguments of the callee function are pushed onto the stack in reverse order by the `caller`.
+     - The address of the next instruction (return address) is pushed onto the stack frame by the `caller`.
+     - The callee function takes over, pushes the previous frame’s base pointer value, and copies ESP (Stack Pointer) value to EBP (Base Pointer).
+     - The caller sets the program counter (IP register) and updates it to store the address of the next instruction in the callee function.
+     - The `callee` is responsible for pushing its `local variables into the stack memory`.
+     - Once the callee’s stack frame is set up, it can execute its logic.
+     - The stack pointer (ESP) is decremented with each push operation and incremented with each pop operation.
+     - The stack grows downward, meaning lower memory addresses are used as the stack expands.
    - Pop operation frees up stack memory and increments the stack pointer, making memory available for further use.
 
 2. **Stack Memory and Stack Frame**:
@@ -39,7 +39,7 @@
    - **A2**: Arguments are pushed onto the stack in reverse order to ensure that they can be accessed in left-to-right order within the called function, adhering to calling conventions.
 
 3. **Q3**: Why does the stack pointer (ESP) decrement when data is pushed and increment when data is popped in stack operations?
-   - **A3**: The stack in most contemporary computer architectures grows downward in memory (from higher addresses to lower addresses). So when data is pushed onto the stack, the stack pointer (ESP) decrements to allocate space for the new data, and when data is popped, it increments, releasing space and moving towards higher memory addresses.
+   - **A3**: The stack in most contemporary computer architectures` grows downward ` in memory (from higher addresses to lower addresses). So when data is pushed onto the stack, the stack pointer (ESP) decrements to allocate space for the new data, and when data is popped, it increments, releasing space and moving towards higher memory addresses.
 
 4. **Q4**: What is the significance of pushing the return address onto the stack during a function call?
    - **A4**: The return address is pushed onto the stack to know where the program should continue executing once the called function completes its execution. It helps to return control to the caller by providing the next instruction address in the caller function after the callee function finishes.
