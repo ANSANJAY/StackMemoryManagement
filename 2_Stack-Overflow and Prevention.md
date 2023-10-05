@@ -1,7 +1,8 @@
-### 100. Stack-Overflow and Prevention 🔄💻
+# Stack-Overflow and Prevention 🔄💻
 
-#### # Concepts 📘
-- **Stack Overflow Definition:** Stack Overflow refers to an error condition that occurs when the program stack grows beyond its maximum allocated size. This often happens due to excessive function calls (particularly in recursion) or the declaration of large arrays within functions, which consume significant stack space.
+- **Stack Overflow Definition:** Stack Overflow refers to an 
+  - error condition that occurs when the program stack grows beyond its maximum allocated size.
+  -  This often happens due to `excessive function calls` (particularly in recursion) or the declaration of large arrays within functions, which consume significant stack space.
   
 - **Cause Through Recursive Functions:** Recursive functions have the potential to bloat the stack memory by perpetually adding to the call stack, which can exceed the maximum stack size limit and thus trigger a stack overflow.
 
@@ -15,7 +16,7 @@
   1. Avoid writing recursive functions.
   2. Do not declare large local arrays within a function.
 
-#### # Curiosity 🤔
+# Curiosity 🤔
 1. **Q1:** How does recursion lead to stack overflow?  
    **A1:** Recursion leads to stack overflow by continually adding new frames to the stack with each function call. If the base case is not reached or the recursive calls are too numerous, the stack can exceed its allocated memory, resulting in a stack overflow.
 
@@ -31,7 +32,7 @@
 5. **Q5:** What is the stack memory, and why is it limited?  
    **A5:** Stack memory is a region of RAM that is used to store temporary data, such as function call frames. It is limited to ensure efficient use of memory resources, protect data from being overwritten, and segregate the memory usage between different types of storage (stack, heap, etc.) to enhance process execution and data management.
 
-#### # Concepts in Simple Words 🍎
+# Concepts in Simple Words 🍎
 - **Stack Overflow:** Imagine a stack of plates. You can only safely stack up to a certain height before it topples over. In computers, a stack overflow is like this, but with memory use. If a program uses too much stack (like stacking too many plates), it "falls over" or errors.
 
 - **Recursion:** Think of recursion like a nesting doll. One function calls itself with a smaller nesting doll inside, and this keeps happening until it reaches the smallest doll. But if there’s no smallest doll (base case), it keeps opening dolls endlessly, like having an infinite amount of dolls (stack overflow).
