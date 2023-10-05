@@ -1,10 +1,9 @@
-### Title: 101. Stack Memory Corruption 🧠💻
+# Stack Memory Corruption 🧠💻
 
----
-
-### # Concepts 📘
-#### Stack Corruption and Its Consequences
-- **Definition**: Stack corruption is an inadvertent alteration of the stack’s data beyond memory limits, often leading to erratic program behavior.
+# Stack Corruption and Its Consequences
+- **Definition**: Stack corruption is an 
+   - inadvertent `alteration of the stack’s data` beyond memory limits
+   - often leading to `erratic program behavior`.
   
 - **Example Breakdown**: 
     - A program containing a `main` function and another function, say `foo`, was provided as an example.
@@ -20,22 +19,36 @@
 
 ---
 
-### # Curiosity 🧐
-##### Technical Interview Questions about Stack Memory Corruption
-1. **Q**: How can a programmer prevent stack corruption in memory-sensitive operations?
-   **A**: Implementing thorough data and buffer size validations, employing secure coding practices such as using functions that limit data copying based on destination buffer size (like `strncpy`), and conducting regular code reviews and testing to spot potential vulnerabilities.
+ # Curiosity 🧐
 
-2. **Q**: Explain the role of the stack frame’s return address and its importance in program execution.
-   **A**: The return address in a stack frame points to the instruction to be executed next in the caller function once the called function finishes execution. It is crucial for enabling the program to continue its flow correctly after a function call.
+## **Q**: How can a programmer prevent stack corruption in memory-sensitive operations?
+   **A**: Implementing thorough 
+   - data and buffer size validations
+   - employing secure coding practices such as using functions that limit data copying based on destination buffer size (like `strncpy`)
+   - conducting regular code reviews and testing to spot potential vulnerabilities.
 
-3. **Q**: What can be some potential consequences, aside from crashes, of stack corruption in a running application?
-   **A**: In addition to crashes, stack corruption can lead to unexpected behavior, data leakage, security vulnerabilities, or even the execution of malicious code if it is exploited by an attacker.
+## **Q**: Explain the role of the stack frame’s return address and its importance in program execution.
+   **A**: The return address in a stack frame points to the  
+   - `instruction to be executed next in the caller function `once the called function finishes execution.
+   -  It is crucial for enabling the program to continue its flow correctly after a function call.
 
-4. **Q**: How is the concept of Buffer Overflow related to Stack Corruption?
-   **A**: Buffer overflow is a situation where an operation writes more data into a buffer than it can hold, which might corrupt adjacent memory spaces. In the context of stack memory, such a buffer overflow can lead to stack corruption, particularly if it overwrites crucial control data like the return address or base pointer value.
+## **Q**: What can be some potential consequences, aside from crashes, of stack corruption in a running application?
+   **A**: In addition to `crashes`
+   - `stack corruption` can lead to unexpected behavior
+   - `data leakage`, 
+   - `security vulnerabilities`, 
+   -  even the `execution of malicious code` if it is exploited by an attacker.
 
-5. **Q**: What mechanisms or tools can assist in identifying and debugging issues related to stack corruption in a development environment?
-   **A**: Tools like static code analyzers, dynamic analysis tools (such as Valgrind), and employing compiler options that help detect and mitigate buffer overflows (such as Stack Canaries and Address Sanitizers) can assist in identifying, debugging, and mitigating stack corruption issues.
+## **Q**: How is the concept of Buffer Overflow related to Stack Corruption?
+   **A**: `Buffer overflow` is a situation where an operation writes more data into a buffer than it can hold, which might corrupt adjacent memory spaces. 
+   - In the context of stack memory, such a buffer overflow can lead to `stack corruption`
+   -  particularly if it `overwrites crucial control data` like the `return address` or `base pointer` value.
+
+## **Q**: What mechanisms or tools can assist in identifying and debugging issues related to stack corruption in a development environment?
+   **A**: Tools like 
+   - static code analyzers, 
+   - dynamic analysis tools (such as Valgrind), 
+   - and employing compiler options that help detect and mitigate buffer overflows (such as Stack Canaries and Address Sanitizers) can assist in identifying, debugging, and mitigating stack corruption issues.
 
 ---
 
@@ -49,7 +62,7 @@
 
 ----
 
-### ASCII Diagram: Stack Memory Corruption 
+# Stack Memory Corruption 
 
 Let's take a moment to illustrate the concept of stack corruption through an ASCII diagram using the context of a function call stack.
 
