@@ -1,6 +1,4 @@
-# Stack Memory Management
-
-# 🖥️ StackMemoryManagement 🚀
+# 🖥️ Stack Memory Management 🚀
 
 Explore the intricate details of stack memory management with a blend of practical guides and theoretical knowledge. This repository dives deep into memory basics, procedure call mechanisms, stack overflow prevention, and more.
 
