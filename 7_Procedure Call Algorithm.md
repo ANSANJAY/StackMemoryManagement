@@ -4,18 +4,24 @@
 
    - The procedure for calling a function involves `setting up a stack frame` in stack memory.
 
+`Caller`
+
      - Arguments of the callee function are pushed onto the stack in reverse order by the `caller`.
+
      - The address of the next instruction (return address) is pushed onto the stack frame by the `caller`.
-     - The callee function takes over, pushes the previous frame’s base pointer value, and copies ESP (Stack Pointer) value to EBP (Base Pointer).
-     - The caller sets the program counter (IP register) and updates it to store the address of the next instruction in the callee function.
+`Calle`
+     - The callee function takes over, pushes the previous frame’s base pointer value,
+     - and copies ESP (Stack Pointer) value to EBP (Base Pointer).
+     - The caller sets the `program counter (IP register)` and updates it to store the address of the next instruction in the callee function.
      - The `callee` is responsible for pushing its `local variables into the stack memory`.
+----
      - Once the callee’s stack frame is set up, it can execute its logic.
      - The stack pointer (ESP) is decremented with each push operation and incremented with each pop operation.
      - The stack grows downward, meaning lower memory addresses are used as the stack expands.
    - Pop operation frees up stack memory and increments the stack pointer, making memory available for further use.
 
 2. **Stack Memory and Stack Frame**:
-   - Stack memory is a region of RAM used for storing temporary variables and function call information.
+   - Stack memory is a region of RAM used for `storing temporary variables` and `function call` information.
    - A stack frame is a memory management technique that supports recursion and logical isolation of variable/data space for function calls.
 
 3. **Registers Involved**:
@@ -26,9 +32,6 @@
 4. **Push and Pop Operations**:
    - Push operation: Adds data to the stack (decrementing the stack pointer).
    - Pop operation: Removes data from the stack (incrementing the stack pointer).
-
-5. **Assembly Code in Procedure Calls**:
-   - The provided transcript discusses assembly code, often used to illustrate lower-level operations during function calls and stack frame setup.
 
 ### 🤔 Curiosity
 
