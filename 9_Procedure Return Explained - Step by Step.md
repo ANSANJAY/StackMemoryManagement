@@ -1,6 +1,4 @@
-# Procedure Return Explained - Step by Step
-
-## 📘 Concepts
+# Procedure Return Explained - Step by Step 📘 
 
 ### Stack Frame Management during Function Return
 When a function \(f_3\) returns, there are several critical steps performed to manage its stack frame and restore the state of the caller function \(f_2\) in a procedural language, particularly highlighted by the steps:
@@ -30,9 +28,8 @@ When a function \(f_3\) returns, there are several critical steps performed to m
 - **EBP (Extended Base Pointer):** Points to the base of the current function’s stack frame.
 - **EIP (Extended Instruction Pointer):** Holds the address of the next instruction to execute.
 
-## 🧐 Curiosity
+# 🧐 Curiosity
 
-### Technical Interview Questions
 
 1. **Q1:** How does the manipulation of the Stack Pointer help in managing local variables and freeing stack memory?
    
@@ -54,7 +51,7 @@ When a function \(f_3\) returns, there are several critical steps performed to m
 
    **A5:** While the general principles (managing SP, BP, and IP, and ensuring proper memory management) remain similar, specific implementation details, conventions, and optimizations can vary between different languages and compilers. The stack management procedure can also be influenced by the underlying hardware architecture and the operating system.
 
-## 🔄 Concepts in Simple Words
+# 🔄 Concepts in Simple Words
 
 When a function (like \(f_3\)) finishes its job and wants to go back to the function that called it (like \(f_2\)), it needs to clean up its mess (remove local variables, arguments, etc. from memory - "the stack") and make sure everything is set up so \(f_2\) can pick up where it left off. This is like going back in time and making sure everything is as it was when \(f_2\) first asked \(f_3\) for help.
 
